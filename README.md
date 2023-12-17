@@ -19,12 +19,12 @@ Given two points on the surface of a sphere, the angle between those two points 
 
 - **Basic Idea:** Represent each point by a unit vector from the center to the surface of the sphere and calculate the dot product of the two vectors.
 
-- The dot product (•) between two 3-D vectors \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \) is given by:
-  \[ \mathbf{r}_1 \cdot \mathbf{r}_2 = |\mathbf{r}_1| \cdot |\mathbf{r}_2| \cdot \cos(\theta_{12}) \]
+- The dot product (•) between two 3-D vectors **r₁** and **r₂** is given by:
 
-  where \( |\mathbf{r}| \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
+where **|r|** is the length of the vector **r**, and **θ₁₂** is the angle between the two vectors.
 
-- Since we are dealing with unit vectors, \( |\mathbf{r}_1| = |\mathbf{r}_2| = 1 \).
+- Since we are dealing with unit vectors, **|r₁| = |r₂| = 1**.
+
 
 This calculation allows us to determine the angle between two points on the surface of the sphere, providing insights into their spatial relationship from the center.
 
@@ -55,6 +55,32 @@ The program reads real and simulated galaxy data from input files, converting ar
 
 Results, including Omega values and histograms, are output to a specified file. The program also provides information about CUDA devices and records the execution time of the kernel. Memory allocated on the GPU is appropriately freed during cleanup.
 
+
+## How to Run the Code
+
+To compile, build, and run the code, you can use the provided `Makefile`. Follow the steps below:
+
+```bash
+# load modules in your cluster
+module load cuda
+module load GCC
+```
+You have to load modules if you are running this program in a cluster
+
+```bash
+# build the source code
+make build
+```
+
+```bash
+# run the complied executable
+make run
+```
+
+```bash
+# clean the compiled files and data
+make clean
+```
 
 ## Results
 
