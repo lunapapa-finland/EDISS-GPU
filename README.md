@@ -15,13 +15,19 @@ The program calculates the angular separation for each galaxy in the real datase
 
 ## What should you consider? 
 
-Given two points on the surface of a sphere, the angle \( \theta_{12} \) between those two points as seen from the center of the sphere can be calculated using the basic idea of representing each point by a unit vector from the center to the surface of the sphere. The calculation involves finding the dot product between the two vectors.
+Given two points on the surface of a sphere, the angle between those two points as seen from the center of the sphere can be calculated using the following approach:
 
-The dot product \( \cdot \) between two 3-D vectors \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \) is given by:
+- **Basic Idea:** Represent each point by a unit vector from the center to the surface of the sphere and calculate the dot product of the two vectors.
 
-\[ \mathbf{r}_1 \cdot \mathbf{r}_2 = \lVert \mathbf{r}_1 \rVert \cdot \lVert \mathbf{r}_2 \rVert \cdot \cos(\theta_{12}) \]
+- The dot product (•) between two 3-D vectors \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \) is given by:
+  \[ \mathbf{r}_1 \cdot \mathbf{r}_2 = |\mathbf{r}_1| \cdot |\mathbf{r}_2| \cdot \cos(\theta_{12}) \]
 
-where \( \lVert \mathbf{r} \rVert \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
+  where \( |\mathbf{r}| \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
+
+- Since we are dealing with unit vectors, \( |\mathbf{r}_1| = |\mathbf{r}_2| = 1 \).
+
+This calculation allows us to determine the angle between two points on the surface of the sphere, providing insights into their spatial relationship from the center.
+
 
 
 
