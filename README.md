@@ -22,7 +22,9 @@ The dot product (\( \cdot \)) between two 3-D vectors \( \mathbf{r}_1 \) and \( 
 \[ \mathbf{r}_1 \cdot \mathbf{r}_2 = |\mathbf{r}_1| \, |\mathbf{r}_2| \, \cos(\theta_{12}) \]
 
 where \( |\mathbf{r}| \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
-![Calculating the angle between random two points in a surface of a sphere](img/anglecalculation.png)
+<!-- ![Calculating the angle between random two points in a surface of a sphere](img/anglecalculation.png) -->
+<img src="img/anglecalculation.png" alt="Calculating the angle between random two points in a surface of a sphere" style="width:50%;">
+
 
 
 ## How It Works
