@@ -11,25 +11,21 @@ BUILD_DIR := build
 #################################################################################
 # COMMANDS                                                                      #
 #################################################################################
-## Load cuda
-load: 
-	module load GCC
-	module load cuda
 
 
 ## Build all packages in project root
 build: 
-	cd $(PROJECT_DIR)/$(SRC_DIR) && nvcc -arch=sm_70 GPU_Ali.cu -lm
+	cd $(PROJECT_DIR)/$(SRC_DIR) && nvcc -arch=sm_70 GPU.cu -lm
 
 ## Clean Build files
 clean:
 	@echo "Cleaning up..."
-	cd $(PROJECT_DIR)/$(BUILD_DIR) && find . -type f \( -name '*.o' -o -name '*.a' -o -name '*.exe' -o -name '*.out' \) -delete
-	cd $(PROJECT_DIR)/$(BUILD_DIR) && find . -type f -exec touch {} \;
+	cd $(PROJECT_DIR)/$(SRC_DIR) && find . -type f \( -name '*.o' -o -name '*.a' -o -name '*.exe' -o -name '*.out' -o -name 'out.data' \) -delete
+	cd $(PROJECT_DIR)/$(SRC_DIR) && find . -type f -exec touch {} \;
 
 ## Run code
 run: 
-	cd $(PROJECT_DIR)/$(SRC_DIR) && srun -p gpu --mem=1G --time=00:20:00 ./a.out data/data_100k_arcmin.dat data/rand_/100k_arcmin.dat result/out.data
+	cd $(PROJECT_DIR)/$(SRC_DIR) && srun -p gpu --mem=1G --time=00:20:00 a.out $(PROJECT_DIR)/data/data_100k_arcmin.dat $(PROJECT_DIR)/data/rand_100k_arcmin.dat out.data
 
 
 
