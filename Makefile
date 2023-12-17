@@ -29,7 +29,7 @@ clean:
 
 ## Run code
 run: 
-	cd $(PROJECT_DIR)/$(SRC_DIR) && srun -p gpu --mem=1G --time=00:20:00 ./a.out data_100k_arcmin.dat rand_/100k_arcmin.dat out.data
+	cd $(PROJECT_DIR)/$(SRC_DIR) && srun -p gpu --mem=1G --time=00:20:00 ./a.out data/data_100k_arcmin.dat data/rand_/100k_arcmin.dat result/out.data
 
 
 
