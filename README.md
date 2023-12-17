@@ -19,9 +19,10 @@ Given two points on the surface of a sphere, the angle \( \theta_{12} \) between
 
 The dot product \( \cdot \) between two 3-D vectors \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \) is given by:
 
-\[ \mathbf{r}_1 \cdot \mathbf{r}_2 = |\mathbf{r}_1| \cdot |\mathbf{r}_2| \cdot \cos(\theta_{12}) \]
+\[ \mathbf{r}_1 \cdot \mathbf{r}_2 = \lVert \mathbf{r}_1 \rVert \cdot \lVert \mathbf{r}_2 \rVert \cdot \cos(\theta_{12}) \]
 
-where \( |\mathbf{r}| \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
+where \( \lVert \mathbf{r} \rVert \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
+
 
 
 <p align="center">
