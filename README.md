@@ -5,9 +5,9 @@ This CUDA program is an assignment which is designed to compute the angles betwe
 ## What It Does
 
 Firstly, it's crucial to note that each line in the files contains the visual position of a galaxy, expressed as two angles in arc minutes(right ascension Alpha and declination Beta). When reading these files, the angles are converted to radians during calculations and later to degrees when creating histograms.
-
-![Right ascension Alpha and declination Beta](img/alphabeta.png)
-
+<p align="center">
+<img src="img/alphabeta.png" alt="Right ascension Alpha and declination Beta" style="width:50%;">
+</p>
 
 The angle between two galaxies can never exceed 180 degrees. With a histogram bin width of 0.25, there are a total of 720 bins, ensuring a comprehensive representation.
 
@@ -15,15 +15,18 @@ The program calculates the angular separation for each galaxy in the real datase
 
 ## What should you consider? 
 
-Given two points on the surface of a sphere, the angle (\( \theta_{12} \)) between those two points as seen from the center of the sphere can be calculated using the basic idea of representing each point by a unit vector from the center to the surface of the sphere. The calculation involves finding the dot product between the two vectors.
+Given two points on the surface of a sphere, the angle \( \theta_{12} \) between those two points as seen from the center of the sphere can be calculated using the basic idea of representing each point by a unit vector from the center to the surface of the sphere. The calculation involves finding the dot product between the two vectors.
 
-The dot product (\( \cdot \)) between two 3-D vectors \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \) is given by:
+The dot product \( \cdot \) between two 3-D vectors \( \mathbf{r}_1 \) and \( \mathbf{r}_2 \) is given by:
 
-\[ \mathbf{r}_1 \cdot \mathbf{r}_2 = |\mathbf{r}_1| \, |\mathbf{r}_2| \, \cos(\theta_{12}) \]
+\[ \mathbf{r}_1 \cdot \mathbf{r}_2 = |\mathbf{r}_1| \cdot |\mathbf{r}_2| \cdot \cos(\theta_{12}) \]
 
 where \( |\mathbf{r}| \) is the length of the vector \( \mathbf{r} \), and \( \theta_{12} \) is the angle between the two vectors.
-<!-- ![Calculating the angle between random two points in a surface of a sphere](img/anglecalculation.png) -->
+
+
+<p align="center">
 <img src="img/anglecalculation.png" alt="Calculating the angle between random two points in a surface of a sphere" style="width:50%;">
+</p>
 
 
 
